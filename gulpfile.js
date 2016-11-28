@@ -92,7 +92,11 @@ gulp.task('test', function () {
   var browserArgs = helpers.parseBrowserArgs(argv).map(helpers.toCapitalCase);
 
   if (process.env.TRAVIS) {
-    browserArgs = ['Chrome_travis_ci'];
+    browserArgs = [
+      'bs_ie_13_windows_10',
+      'bs_chrome_51_mac_elcapitan',
+      'bs_firefox_46_mac_mavericks',
+    ];
   }
 
   if (argv.browserstack) {
